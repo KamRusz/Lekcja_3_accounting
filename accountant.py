@@ -48,7 +48,6 @@ while True:
     elif argument =="stop":
         operacje.append(argument)
         break   
-
 if sys.argv[1] =="saldo":  
     print (suma_saldo*2)
 elif sys.argv[1] =="sprzedaz":   
