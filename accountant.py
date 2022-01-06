@@ -71,6 +71,7 @@ elif argument =="sprzedaz":                                                     
             for i in range(len(operacje)):
                 print(*operacje[i], sep = "\n")  
 elif argument =="zakup":                                                        #działa
+    identyfikator, cena, liczba = sys.argv[2:]
     identyfikator = (sys.argv[2])
     cena = int(sys.argv[3])
     liczba = int(sys.argv[4])
@@ -87,15 +88,21 @@ elif argument =="zakup":                                                        
             print(*operacje[i], sep = "\n")
 elif argument =="konto":                                                        #działa
     print (f"\nwartość saldo:{suma_saldo}") 
-elif argument =="magazyn":                                                      #kiełbasi się
-    for i in range(2,len(sys.argv)):
-    #for i in range(1):
-        print(towary.get("rapsberry"))
-        print(towary)
+elif argument =="magazyn": 
+    for i in sys.argv:
+        if i in towary:
+            print(i, towary[i])        
+    #for k,v in towary.items():
+    #   if k in sys.argv:
+    #   print(k,v) 
 
         
 elif argument =="przeglad":                                                     #działa
-    par2 = (sys.argv[2])
-    par3 = (sys.argv[3])
-    for i in range (int(par2),int(par3)+1):
+    zakres_od = int(sys.argv[2])
+    zakres_do = int(sys.argv[3])
+    if zakres_do >= len(sys.argv):
+        zakres_do = len(sys.argv)
+    for i in range (int(zakres_od),int(zakres_do)+1):
         print(*operacje[i], sep = "\n")
+
+
