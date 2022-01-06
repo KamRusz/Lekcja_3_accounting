@@ -56,15 +56,15 @@ while True:
     elif argument =="stop":
         operacje.append(argument)
         break   
+    
+if sys.argv[1] =="konto":                                       #funkcja konto
+    print (f"\nwartość saldo:{suma_saldo}") 
+elif sys.argv[1] =="magazyn":
+    print (f"\nstan magazynu: \n {towary}")                     #funkcja magazyn    
+elif sys.argv[1] =="przeglad":                                  #funkcja przeglad
+    for i in range (int(sys.argv[2]),int(sys.argv[3])+1):
+        print(*operacje[i], sep = "\n")
 
-print(*operacje)   
-print(len(operacje))    
-#if sys.argv[1] =="konto":
-#    print (f"\nwartość saldo:{suma_saldo}") 
-#elif sys.argv[1] =="magazyn":
-#    print (f"\nstan magazynu: \n {towary}") #punkt e z zadania    
-#elif sys.argv[1] =="przeglad":   
-#if sys.argv[1] =="przeglad":         
-#    for i in range len(operacje[0]):
-#        print (operacje[1.i])
+
+
 
