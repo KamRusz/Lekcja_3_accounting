@@ -89,9 +89,11 @@ elif argument =="zakup":                                                        
 elif argument =="konto":                                                        #działa
     print (f"\nwartość saldo:{suma_saldo}") 
 elif argument =="magazyn": 
-    for i in sys.argv:
+    for i in sys.argv[2:]:
         if i in towary:
-            print(i, towary[i])        
+            print(i, towary[i])  
+        else:
+            print(i,"0")          
     #for k,v in towary.items():
     #   if k in sys.argv:
     #   print(k,v) 
